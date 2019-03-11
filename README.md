@@ -8,4 +8,4 @@ mineweeper-app/ is the react project
 2. start app with 'yarn start'
 
 backend/ is django
-start with 'python manage.py runserver'
+1. start with 'python manage.py runserver'
