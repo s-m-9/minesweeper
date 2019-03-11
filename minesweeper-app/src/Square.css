@@ -1,0 +1,15 @@
+.square {
+    width: 30px;
+    height: 30px;
+}
+
+.row {
+    display: flex;
+    /* float: left; */
+}
+
+.column {
+    float: 10%;
+    margin-left: 3px
+    /* display:inline-block; */
+}

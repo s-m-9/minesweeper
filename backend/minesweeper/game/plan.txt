@@ -1,0 +1,36 @@
+My Minesweeper Plan
+
+
+How to create the board
+    1. get length number, get width number
+    2. create board length x width maybe an array[row][column]
+        a. build it on board, filling with zeros
+    3. randomly add n number of bombs to the board
+        a. adds incrementation around it
+            i.    Top-Left:     [0, 0]
+            ii.   Top:          [0, 1]
+            iii.  Top-Right:    [0, 2]
+            iv.   Right:        [1, 2]
+            v.    Bottom-Right: [2, 2]
+            vi.   Bottom:       [2, 1]
+            vii.  Bottom-Left:  [1, 1]
+            viii. Left:         [0, 1]
+        b. check to see if incrementation is out of range
+
+
+End game condition 
+    1. The player clicks all the non-bomb infested squares
+    2. The player clicks a bomb infested square
+    
+
+Coding Requirements:
+    1. The map should not be stored on the client side, to prevent the player from cheating.
+        a. Board Created in Python
+        b. View Created in Javascript
+            i. only have knowledge of how big the board is, which is probably hardcoded
+    2. When clicking on a box, an AJAX request should be sent to the server to determine the current status of the field and update it accordingly.
+        a. User clicks a box, coordinates are sent to the server. (POST)
+        b. The server then checks board, and sees the status, returns it, and game logic is stored on the server
+    3. Game states should be stored on the server such that the player can get back to a game by going to the game's URL.
+        a. moves are recorded by server
+        b. url contains the id of game, so it can load the state of board if travelled to.
