@@ -1,5 +1,5 @@
 # minesweeper
-A minesweeper game for Fellow
+A minesweeper game
 
 
 mineweeper-app/ is the react project
